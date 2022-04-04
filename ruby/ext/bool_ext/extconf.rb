@@ -4,7 +4,7 @@ if CONFIG['CC'] =~ /mingw/
   $CFLAGS << ' -O2' 
 elsif CONFIG['CC'] =~ /gcc|clang/
   CONFIG['CC'] = ENV['CC'] if ENV['CC']
-  $CFLAGS << ' -O2 -Werror -Wall -Wunused-parameter' 
+  $CFLAGS << ' -O2 -Wall -Wunused-parameter' 
 end
 
 puts "======= compiling with #{CONFIG['CC']}"
